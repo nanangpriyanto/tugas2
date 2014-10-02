@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <conio.h>
+main()
+{
+float menu, menu1, hasil;
+int pilihan;
+
+printf("Nama  : Nanang Priyanto\n");
+printf("Nim   : 3143111018\n");
+printf("Prodi : D3 Manajemen Informatika\n");
+printf("Kelas : A\n\n");
+
+kembali :
+
+printf("================================================================================\n");
+printf("\t\t    PROGRAM MENGHITUNG VOLUME KUBUS, SILINDER\n\n");
+printf("\t\t\t      DAN LUAS LINGKARAN\n\n");
+printf("================================================================================\n");
+
+printf("\n\n\t\t    Pilih salah satu menu di bawah ini : \n\n");
+printf("\t\t\t1. Menghitung Volume Kubus\n");
+printf("\t\t\t2. Menghitung Volume Silinder\n");
+printf("\t\t\t3. Menghitung Luas Lingkaran\n\n");
+printf("\t\t    Masukkan pilihan            : ");
+scanf("%d", &pilihan);
+printf("\n");
+
+switch(pilihan)
+{
+case 1:
+printf("\t\t    Masukkan panjang sisi kubus : ");
+scanf("%f", &menu);
+printf ("\n");
+hasil=(pow(menu,3));
+printf("\t\t    Jadi Volume Kubus adalah %.2f",hasil);
+goto terimakasih;
+break;
+
+case 2:
+printf("\t\t    Masukkan panjang jari-jari lingkaran : ");
+scanf("%f", &menu);
+printf ("\n");
+printf("\t\t    Masukkan tinggi silinder             : ");
+scanf("%f", &menu1);
+printf ("\n");
+hasil=(3.14*pow(menu,2)*menu1);
+printf("\t\t    Jadi Volume Silinder adalah %.2f",hasil);
+goto terimakasih;
+break;
+
+case 3:
+printf("\t\t    Masukkan panjang jari-jari lingkaran : ");
+scanf("%f", &menu);
+printf ("\n");
+hasil=(3.14*pow(menu,2));
+printf("\t\t    Jadi Luas Lingkarannya adalah %.2f",hasil);
+goto terimakasih;
+break;
+
+default:
+printf("\n\n================================================================================");
+printf("\t\t\tMAAF KODE YANG ANDA MASUKKAN SALAH\n");
+printf("================================================================================\n\n\n\n");
+goto kembali;
+}
+
+terimakasih :
+printf ("\n\n\n");
+printf("================================================================================\n");
+printf("\tTERIMA KASIH TELAH MENGGUNAKAN PROGRAM INI, SEMOGA BERMANFAAT\n\n");
+printf("\t\tSILAHKAN EXIT PROGRAM UNTUK MEMULAI KEMBALI\n\n");
+printf("================================================================================\n");
+getch();
+}
